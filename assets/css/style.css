@@ -1,0 +1,14 @@
+#header{
+    text-align: center;
+    height: 400px;
+    background-color: brown;
+    color: white;
+    margin-top: 2%;
+    padding-top: 100px;
+}
+
+.card-header{ 
+    
+    background-color:red;
+    
+}
