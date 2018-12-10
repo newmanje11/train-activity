@@ -27,3 +27,28 @@ var newTrain = {
     freq: gameFreq,
     firstGame: gameTime,
 }
+
+var firstGameInput = "";
+
+
+$("#add-data").on("click", function (event) {
+    event.preventDefault();
+
+    firstTrainInput = moment($("#train-time").val().trim(), "HH:mm").format("HH:mm");
+
+    // Error handler when First Train Time is outside of the 24h military time
+    if (firstGameInput !== 'Invalid date') {
+        // Grabs values from textboxes
+        newGame.name = $("#train-name").val().trim();
+        newGame.dest = $("#train-destination").val().trim();
+        newGame.firstGame = firstGameInput;
+        newGame.freq = $("#train-freq").val().trim();
+    } else {
+        alert("Please enter a valid Game Time");
+        clearInput();
+    }
+    database.ref().push(newGame);
+
+    // Clears all input boxes
+    clearInput();
+})
