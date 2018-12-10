@@ -39,10 +39,10 @@ $("#add-data").on("click", function (event) {
     // Error handler when First Train Time is outside of the 24h military time
     if (firstGameInput !== 'Invalid date') {
         // Grabs values from textboxes
-        newGame.name = $("#train-name").val().trim();
-        newGame.dest = $("#train-destination").val().trim();
+        newGame.name = $("#game-name").val().trim();
+        newGame.dest = $("#game-destination").val().trim();
         newGame.firstGame = firstGameInput;
-        newGame.freq = $("#train-freq").val().trim();
+        newGame.freq = $("#game-freq").val().trim();
     } else {
         alert("Please enter a valid Game Time");
         clearInput();
@@ -52,3 +52,10 @@ $("#add-data").on("click", function (event) {
     // Clears all input boxes
     clearInput();
 })
+
+function clearInput() {
+    $("#game-name").val("");
+    $("#game-destination").val("");
+    $("#game-time").val("");
+    $("#game-freq").val("");
+}
