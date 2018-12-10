@@ -7,3 +7,23 @@ var config = {
     messagingSenderId: "427734489298"
   };
   firebase.initializeApp(config);
+
+
+  var database = firebase.database();
+
+// Initial values
+var currentTime = "";
+var gameName = "";
+var gameDest = "";
+var gameTime = "";
+var gamenFreq = 0;
+var timeDiff = 0;
+var timeRemainder = 0;
+var nextArrival = 0;
+var minAway = 0;
+var newTrain = {
+    name: gameName,
+    dest: gameDest,
+    freq: gameFreq,
+    firstGame: gameTime,
+}
